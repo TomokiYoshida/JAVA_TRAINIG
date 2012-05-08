@@ -1,21 +1,17 @@
-package ch02.ex03_01;
+package ch03.ex03_01;
 
-public class PassengerVehicle {
+public class Vehicle {
 
 	private static int nextId = 0;
 
 	private int speed = 0;
 	private int direction;
 	private String[] ownerName;
-	private int sheetNumber = 0;
-	private int useSheetNumber = 0;
-
 	public enum ANGLE{
 		LEFT, RIGHT;
 	}
 	public static final ANGLE TURN_LEFT = ANGLE.LEFT;
 	public static final ANGLE TURN_RIGHT = ANGLE.RIGHT;
-
 
 	private final int id;
 
@@ -24,18 +20,12 @@ public class PassengerVehicle {
 		id= nextId;
 	}
 
-	public PassengerVehicle(String... ownerName){
+	public Vehicle(String... ownerName){
 		this.ownerName = ownerName;
 	}
 
-	public PassengerVehicle(){
+	public Vehicle(){
 	}
-	public PassengerVehicle(int sheetNumber, int useSheetNumber){
-		this.sheetNumber = sheetNumber;
-		this.useSheetNumber = useSheetNumber;
-
-	}
-
 	public int getSpeed() {
 		return speed;
 	}
@@ -56,7 +46,7 @@ public class PassengerVehicle {
 		this.direction = direction % 360;
 	}
 
-	public void turn(int angle){
+	public  final void turn(int angle){
 		direction = (direction + angle)%360;
 	}
 	public void turn(ANGLE angle){
@@ -90,29 +80,24 @@ public class PassengerVehicle {
 		return str;
 	}
 
-
-	public int getSheetNumber() {
-		return sheetNumber;
-	}
-
-	public void setSheetNumber(int sheetNumber) {
-		this.sheetNumber = sheetNumber;
-	}
-
-	public int getUseSheetNumber() {
-		return useSheetNumber;
-	}
-
-	public void setUseSheetNumber(int useSheetNumber) {
-		this.useSheetNumber = useSheetNumber;
-	}
-
 	public static void main(String[] args){
-		PassengerVehicle v1 = new PassengerVehicle(3,1);
-		PassengerVehicle v2 = new PassengerVehicle(4,2);
-		System.out.println("sheet number : " + v1.getSheetNumber() + " use sheet number ; " + v1.getUseSheetNumber());
-		System.out.println("sheet number : " + v2.getSheetNumber() + " use sheet number ; " + v2.getUseSheetNumber());
+		Vehicle v1 = new Vehicle(args);
+		String[] ownerList = v1.ownerName;
+		if(ownerList == null || ownerList.length == 0){
+			return;
+		}
+		else{
+			for(int i = 0; i < ownerList.length; i++){
+				System.out.println(ownerList[i]);
+			}
+		}
 
+		v1.turn(Vehicle.TURN_LEFT);
+		System.out.println("angle = " + v1.getDirection());
+		v1.turn(Vehicle.TURN_RIGHT);
+		System.out.println("angle = " + v1.getDirection());
+		v1.turn(180);
+		System.out.println("angle = " + v1.getDirection());
 
 	}
 

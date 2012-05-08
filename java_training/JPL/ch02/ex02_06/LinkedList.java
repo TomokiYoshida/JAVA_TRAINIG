@@ -36,6 +36,8 @@ public class LinkedList {
 		LinkedList l2 = new LinkedList();
 		l2.setObj(v2);
 		l1.setNext(l2);
+		
+		
 	}
 
 }
