@@ -1,0 +1,14 @@
+PassengerVehicleオブジェクトの定員を負の数に設定しようとした
+→IllegalArgumentExceptionをthrowする
+オブジェクトがその初期値を設定するのに使用する設定ファイルに、文法エラーが見つかった
+→Exceptionをthrowする
+プログラマが指定した単語を文字列の配列から検索するメソッドが発見できない
+→Exeptionをthrowするか,nullを返す
+openメソッドへ指定されたファイルが存在しない
+→FileNotFoundExceptionを返す
+openメソッドへファ指定されたファイルは存在するが、セキュリティにより使用できない
+→Exceptionを作成し、throwする
+リモートのサーバプロセスにネットワークコネクションを確立しようとするが接続できない
+→Exceptionを作成し、throwする
+リモートのサーバプロセスとのやり取りの最中にネットワークコネクションが切れる
+→Exceptionを作成し、throwする

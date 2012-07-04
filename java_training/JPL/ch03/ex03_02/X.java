@@ -8,11 +8,15 @@ public class X {
 		System.out.printf("%x %x %x%n",xMask, 00, fullMask);
 	}
 	public X(){
+		testShow();
 		fullMask = xMask;
-
+		testShow();
 	}
 	public int mask(int orig){
 		return (orig & fullMask);
+	}
+	protected void testShow(){
+
 	}
 
 }
