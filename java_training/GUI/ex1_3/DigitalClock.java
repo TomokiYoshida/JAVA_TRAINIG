@@ -77,7 +77,7 @@ public class DigitalClock extends Window implements Runnable {
 	PopupMenu pop = new PopupMenu("Kitty");
 	private Robot robot;
 	private BufferedImage image;
-	private boolean isTransparent = false;
+	private boolean isTransparent =false;
 	static Thread thread;
 	boolean isClockActive = true;
 	boolean isPopUped = false;
