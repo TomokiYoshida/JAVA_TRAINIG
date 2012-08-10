@@ -566,6 +566,9 @@ public class InterpretTabPanel extends JPanel implements ActionListener {
 		}
 		try{
 			Reflection.executeMethod(objectList[listNumber], methodName, paramTypeList, paramValueList);
+		}catch(InvocationTargetException e){
+			showResult(e.getCause().toString());
+			return;
 		}catch(Exception ex){
 			showResult(ex.toString());
 			return;
