@@ -86,9 +86,9 @@ public class Reflection {
 	 * @throws NoSuchMethodException
 	 * @throws InvocationTargetException
 	 */
-	public static void executeMethod(Object object , String methodName, String[] params, String[] paramValues)throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException{
+	public static Object executeMethod(Object object , String methodName, String[] params, String[] paramValues)throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException{
 
-		if(params == null )return;
+		if(params == null )return null;
 		Class[] paramClasses = new Class[params.length];
 		Object[] values  = new Object[params.length];
 		for(int i = 0; i < params.length; i ++){
@@ -117,7 +117,7 @@ public class Reflection {
 		}
 		Method m = object.getClass().getMethod(methodName, paramClasses);
 		m.setAccessible(true);
-		m.invoke(object, values);
+		return m.invoke(object, values);
 	}
 
 	/**

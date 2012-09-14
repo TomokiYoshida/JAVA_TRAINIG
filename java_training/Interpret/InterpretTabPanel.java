@@ -564,8 +564,9 @@ public class InterpretTabPanel extends JPanel implements ActionListener {
 			paramTypeList[i] = (String)tMethod1.getValueAt(i,0);
 			paramValueList[i] = (String)tMethod1.getValueAt(i,1);
 		}
+		Object obj = null;
 		try{
-			Reflection.executeMethod(objectList[listNumber], methodName, paramTypeList, paramValueList);
+			obj = Reflection.executeMethod(objectList[listNumber], methodName, paramTypeList, paramValueList);
 		}catch(InvocationTargetException e){
 			showResult(e.getCause().toString());
 			return;
@@ -573,8 +574,12 @@ public class InterpretTabPanel extends JPanel implements ActionListener {
 			showResult(ex.toString());
 			return;
 		}
+		if(obj != null){
+			showResult(obj.toString());
+		}else{
+			showResult("メソッドを実行しました。");
+		}
 
-		showResult("メソッドを実行しました。");
 	}
 
 	/**
