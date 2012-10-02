@@ -5,7 +5,7 @@ public class LinkedList<E> {
 	E obj;
 	LinkedList<E> next;
 
-	public Object getObj() {
+	public E getObj() {
 		return obj;
 	}
 	public void setObj(E obj) {

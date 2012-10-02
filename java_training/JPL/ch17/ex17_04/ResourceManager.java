@@ -49,6 +49,7 @@ import java.util.Map;
 				ref.clear();
 			}
 			catch (InterruptedException ex) {
+				
 				break;//すべて終了
 			}
 		}

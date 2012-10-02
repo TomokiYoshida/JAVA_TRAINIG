@@ -35,7 +35,7 @@ public class PlayerLoader extends ClassLoader{
 		}
 		static FileInputStream streamFor(String name)throws IOException{
 
-			return new FileInputStream("resourec/" + name);
+			return new FileInputStream("resource/" + name);
 
 		}
 }

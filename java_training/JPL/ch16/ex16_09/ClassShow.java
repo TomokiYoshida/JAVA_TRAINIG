@@ -15,7 +15,7 @@ public class ClassShow{
 
 
 	public static void main(String[]args){
-		String[] rgs = {"ch16.ex16_04.Sample"};
+		String[] rgs = {"java.lang.String"};
 		args = rgs;
 		try{
 			Class<?> c = Class.forName(args [0]);
@@ -23,14 +23,12 @@ public class ClassShow{
 			if(Modifier.isPublic(mod))System.out.print("public ");
 			else if(Modifier.isPrivate(mod))System.out.print("private ");
 			else if(Modifier.isProtected(mod))System.out.print("protected ");
-			if(Modifier.isStatic(mod))System.out.println("static ");
-			if(Modifier.isFinal(mod))System.out.println("final ");
+			if(Modifier.isStatic(mod))System.out.print("static ");
+			if(Modifier.isFinal(mod))System.out.print("final ");
 			System.out.println(strip(c.toString(), c.getPackage().getName() + "." ));
 			showClassContents(c);
-			showMembers(c.getPackage().getName());
-			/*printMembers(c.getFields());
-			printMembers(c.getConstructors());
-			printMembers(c.getMethods());*/
+			showMembers(c.getPackage().getName() + "." ,  c.getSimpleName() + ".");
+
 		} catch (ClassNotFoundException e){
 			System.out.println("unknown class" + args[0]);
 		}
@@ -103,10 +101,10 @@ public class ClassShow{
 	}
 	}
 
-	private static void showMembers(String packageName){
+	private static void showMembers(String packageName, String className){
 		for (String s : members) {
 		System.out.print(" ");
-		System.out.println(strip(s, packageName + "."));
+		System.out.println(strip(strip(s, packageName), className));
 	}
 	}
 
