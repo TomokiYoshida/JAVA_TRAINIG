@@ -7,7 +7,7 @@ import java.io.InputStream;
 /**
 バイトを何らかの値とXORするなど、どのようなアルゴリズムでも良いので、バイトを暗号
 化する一組のFilterストリームクラスであるDecrypt lnPutStreamとEncryptOutputStreamを作成しな
-さい。DecryptlnputStrealnは、EncryptOutputStrealnクラスが生成したバイトを復号化します。
+さい。DecryptlnputStrealnは、EncryptOutputStrealnクラスが生成したバイトを復号化します。p454
  * @author tom
  *
  */

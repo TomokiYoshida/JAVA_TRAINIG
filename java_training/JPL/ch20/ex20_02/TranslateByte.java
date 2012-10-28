@@ -1,7 +1,7 @@
 package ch20.ex20_02;
 import java.io.*;
 /**
- *TranslateByteクラスをフィルターとして書き直しなさい。
+ *TranslateByteクラスをフィルターとして書き直しなさい。p454
  * @author tom
  *
  */

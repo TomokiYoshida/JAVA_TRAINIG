@@ -9,7 +9,7 @@ import java.io.Reader;
 
 /**
  *1行全体が揃うまで待つメソッドを使用して、1度に1行の入力を返すFilterReaderのサブ
-クラスを作成しなさい。
+クラスを作成しなさい。p454
  * @author tom
  *
  */
@@ -36,6 +36,11 @@ public class FilterReaderEx extends FilterReader{
 	}
 	public static void main(String[] args){
 		try{
+		/*test.txt
+		 * testvaj;vvkl;avdl;ajkdlj;alj:ahiageaae
+			fadaadaeaeweggaa
+			eaeafefaefafeass
+		 */
 		FilterReaderEx frx = new FilterReaderEx(new FileReader(new File("resource/test.txt")));
 		System.out.println(frx.readLine());
 		}catch(FileNotFoundException e){

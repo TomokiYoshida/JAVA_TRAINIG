@@ -3,7 +3,7 @@ package ch17.ex17_05;
  * 刈り取リスレッドを使用しないようにリソースマネジャーを再設計しなさい。リソースマネ
 ジャーが持つセマンテイックスを明確にし、リソースがいつ解放されるかについても明確にしなさい。
  * @author tom
- *
+ *できませんでした。。
  */
 public class Resourcelmpl implements Resource {
 		int keyHash;

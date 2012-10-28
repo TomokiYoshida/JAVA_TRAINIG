@@ -1,9 +1,9 @@
 package ch17.ex17_04;
 /**
- * 刈り取リスレッドを修正して、すべての割り当てられたリツースが解放されるまで、シャット
+ * 刈り取リスレッドを修正して、すべての割り当てられたリソースが解放されるまで、シャット
 ダウンの後も生き続けるようにしなさい。
  * @author tom
- *
+ * できませんでした。。
  */
 public class Resourcelmpl implements Resource {
 		int keyHash;

@@ -6,7 +6,12 @@ import java.lang.ref.ReferenceQueue;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * 刈り取リスレッドを修正して、すべての割り当てられたリソースが解放されるまで、シャット
+ダウンの後も生き続けるようにしなさい。
+ * @author tom
+ * ..
+ */
 	public final class ResourceManager{
 		final ReferenceQueue<Object> queue;
 		final Map<Reference<?>, Resource> refs;
@@ -49,7 +54,7 @@ import java.util.Map;
 				ref.clear();
 			}
 			catch (InterruptedException ex) {
-				
+
 				break;//すべて終了
 			}
 		}

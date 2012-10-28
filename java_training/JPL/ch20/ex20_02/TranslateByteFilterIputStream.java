@@ -3,7 +3,7 @@ import java.io.*;
 
 import javax.xml.crypto.dsig.spec.XPathType.Filter;
 /**
- *TranslateByteクラスをフィルターとして書き直しなさい。
+ *TranslateByteクラスをフィルターとして書き直しなさい。p454
  * @author tom
  *
  */
